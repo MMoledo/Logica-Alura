@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+<script>
+	function linha (){
+		document.write("<br>")
+	}
+
+	function mostra(frase){
+		document.write(frase)
+		linha ()
+	}
+	function somaidades(idade1,idade2) {
+		return (idade1+idade2)
+	}
+	var nome = prompt("Insira seu nome:")
+	var idade = parseInt(prompt(nome+", Insira sua idade:"))
+	var idadepedro = parseInt(prompt (nome+", Insira a idade do Pedro:"))
+	var mep = somaidades(idade,idadepedro)
+	
+	mostra("<big> Olá " + nome + " sua idade é: "+ idade)
+	linha()
+
+	document.write ("A soma das idades é: "+ mep)
+	linha()
+
+
+
+</script>

@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<input/>
+<button>Teste</button>
+
+	
+
+<script>
+	var aleatorio = Math.round(Math.random()*10)
+	while (aleatorio==0){
+		var aleatorio = Math.round(Math.random()*10)
+	}
+	var input = document.querySelector("Input")
+	input.focus()
+
+	function teste(){
+		if (input.value == aleatorio){
+		alert("Você Acertou!")
+		} else {
+		alert("Você Errou!!!")
+		input.value = ""
+		input.focus()
+		}
+	}
+
+	var button = document.querySelector("button")
+	button.onclick = teste
+
+
+
+
+</script>

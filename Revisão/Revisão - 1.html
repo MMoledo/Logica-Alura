@@ -1,0 +1,74 @@
+<meta charset="utf-8">
+<input/>
+<button>Teste</button>
+<script type="text/javascript">
+	function pulalinha(){
+		document.write("<br>")
+	}
+	function mostra(texto){
+		document.write(texto)
+		pulalinha()
+	}
+	pulalinha()
+	var senha = prompt("Digite sua senha de 5 digitos:")
+	var dica = 0
+
+	for(var count = 3; count >=0; count--){
+		var tentativa = prompt("Repita sua senha:")
+		if (tentativa==senha){
+			mostra("Acesso Liberado")
+			break
+		}
+		else {
+			alert("Tente novamente, " + count + " tentativas restantes")
+		}
+	}
+	if (senha!=tentativa){
+		mostra("Acesso Negado")
+	}
+	var aleatorio = Math.round(Math.random()*10)
+	while(aleatorio==0){
+		var aleatorio = Math.round(Math.random()*10)
+	}
+
+	var input = document.querySelector("input");
+    input.focus();
+
+    var dica = 4
+
+    function verifica() {
+
+        if(input.value == aleatorio) {
+            alert("Você ACERTOU!");
+        } else {
+
+            alert("Você ERROU!!!!!!!!")
+             switch(dica){
+             	case 4:
+             		break
+    			case 3:
+    				alert("1 Dica - Seu numero dividido por 2 é: "+aleatorio/2)
+    				break
+    			case 2:
+    				alert("2 Dica - Seu numero mais 10 é: " + parseInt(aleatorio+10))
+    				break
+    			case 1:
+    				alert("3 Dica - Seu numero vezes 3 é "+ aleatorio*3)
+    				break
+    			default:
+    				alert("Sem dicas restantes.")
+
+    }
+            dica--
+        } 
+
+        input.value = ""
+        input.focus()
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+	mostra(aleatorio)
+
+
+</script>

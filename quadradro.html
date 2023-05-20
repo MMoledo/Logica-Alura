@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<canvas width="1300" height="650"></canvas>
+<script>
+	var tela = document.querySelector("Canvas")
+	var pincel = tela.getContext("2d")
+
+	function triangulo(cor,a,b,c,d,e,f) {
+		pincel.beginPath()
+		pincel.fillStyle = cor
+		pincel.moveTo(a,b)
+		pincel.lineTo(a,c)
+		pincel.lineTo(d,c)
+		pincel.fill()
+
+		pincel.beginPath()
+		pincel.fillStyle = 'white'
+		pincel.moveTo(a+50,b+125)
+		pincel.lineTo(a+50,c-50)
+		pincel.lineTo(d-125,c-50)
+		pincel.fill()
+
+
+	}
+	triangulo('yellow',20,20,400,600)
+
+
+
+</script>

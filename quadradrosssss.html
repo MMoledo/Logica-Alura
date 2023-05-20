@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<canvas width="1300" height="650"></canvas>
+<script>
+	var tela = document.querySelector("Canvas")
+	var pincel = tela.getContext("2d")
+
+	function quadradro(x,y,cor) {
+		pincel.fillStyle = (cor)
+		pincel.fillRect(x,y,50,50)
+		pincel.strokeStyle = ("black")
+		pincel.strokeRect(x,y,50,50)
+	}
+	var x = 0
+	for (x = 0; x<=1300; x+=50){
+		for (y=0;y<=650;y+=50){
+			var teste = x%100
+			var teste2 = y%100
+			if (teste == 0 && teste2 == 0){
+				quadradro(x,y,'green')
+			} else{
+				if (teste == 0 && teste2 != 0){
+					quadradro(x,y,'red')
+				} else{
+					if (teste != 0 && teste2 == 0){
+						quadradro(x,y,'blue')
+					}else{
+						quadradro(x,y,'yellow')
+					}
+					}
+					}
+				}
+			}
+
+	
+
+
+</script>
